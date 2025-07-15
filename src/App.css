@@ -1,0 +1,250 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.scrollable-container {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow-1 {
+  flex: 1 1 auto;
+}
+
+body.theme-dark {
+  background:
+    linear-gradient(135deg, #040404 0%, #1c132b 100%),
+    url("https://www.transparenttextures.com/patterns/arches.png");
+  background-repeat: repeat;
+  color: #fff;
+  background-size: auto; /* or 'cover' or a specific size */
+background-blend-mode: overlay; /* optional: for better effect */
+
+}
+
+body.theme-dark .navbar {
+  background: #18122B !important;
+}
+
+body.theme-dark .footer {
+  background: #18122B !important;
+  color: #fff;
+}
+
+body.theme-dark .card {
+  background: rgba(24, 18, 43, 0.6) !important;
+  border: 1px solid rgba(162, 89, 255, 0.3) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff !important;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.12);
+}
+
+body.theme-dark .card * {
+  color: #fff !important;
+}
+
+body.theme-dark .badge.bg-secondary,
+body.theme-dark .badge.bg-info {
+  background: #a259ff !important;
+  color: #fff !important;
+}
+
+body.theme-dark .btn-outline-primary,
+body.theme-dark .btn-primary {
+  border-color: #a259ff;
+  color: #fff;
+  background: #a259ff;
+}
+
+body.theme-dark .btn-outline-primary:hover,
+body.theme-dark .btn-primary:hover {
+  background: #fff;
+  color: #a259ff;
+  border-color: #a259ff;
+}
+
+body.theme-dark .nav-link.active {
+  color: #a259ff !important;
+  font-weight: bold;
+}
+
+body.theme-dark .nav-link {
+  color: #fff !important;
+}
+
+body.theme-dark .navbar-brand {
+  color: #fff !important;
+}
+
+body.theme-dark a {
+  color: #a259ff;
+}
+
+body.theme-dark a:hover {
+  color: #fff;
+  background: #a259ff;
+}
+
+body.theme-light {
+  background: #f8f9fa;
+  color: #222;
+}
+
+/* Header & Footer */
+.theme-dark .navbar, .theme-light .navbar {
+  background: #18122B !important;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-bottom: 1px solid rgba(162, 89, 255, 0.12);
+}
+.theme-dark .footer, .theme-light .footer {
+  background: #18122B !important;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-top: 1px solid rgba(162, 89, 255, 0.12);
+}
+.navbar-nav {
+  gap: 2rem;
+}
+.nav-link {
+  position: relative;
+  transition: color 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+  color: #01c3a8 !important;
+}
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #01c3a8, #ffb741 80%);
+  transition: width 0.3s;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+/* Cyberpunk Card */
+.theme-dark .card, .theme-light .card {
+  position: relative;
+  background: radial-gradient(circle at 85% 10%, #01c3a8 0%, #2D1B4A 60%, #18122B 100%);
+  border: none;
+  color: #fff;
+  /* box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18); */
+  overflow: hidden;
+}
+.theme-dark .card::before, .theme-light .card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* border-radius: 30px; */
+  pointer-events: none;
+  z-index: 1;
+  border: 1px solid #18122B;
+  /* background: #fff; */
+  
+}
+.theme-dark .card-body, .theme-light .card-body {
+  position: relative;
+  z-index: 2;
+}
+.theme-dark .card * {
+  color: #fff !important;
+}
+.theme-light .card {
+  background: radial-gradient(circle at 85% 10%, #7b7b7b0f 0%, #fff 60%, #eae6f829 100%);
+  color: #a7d0fc26;
+}
+.theme-light .card * {
+  color: #2D1B4A !important;
+}
+
+/* Social icons in footer */
+.footer .social-icons {
+  display: flex;
+  /* gap: 1.5rem; */
+  align-items: center;
+}
+.footer .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.footer .social-icons a:hover {
+  box-shadow: 0 0 8px 2px #14201f, 0 0 2px 1px #000000;
+  background: rgba(221, 245, 1, 0.162);
+}
+
+/* Responsive spacing for header/footer */
+@media (max-width: 768px) {
+  .theme-dark .navbar, .theme-light .navbar,
+  .theme-dark .footer, .theme-light .footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .navbar-nav {
+    gap: 1rem;
+  }
+}
