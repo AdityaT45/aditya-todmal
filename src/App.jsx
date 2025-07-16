@@ -35,7 +35,8 @@ function App() {
 
   return (
     <Router>
-      <div className="app-wrapper d-flex flex-column min-vh-100" style={{height:'100vh',overflow:'hidden'}}>
+      <div className="flex-grow-1 d-flex align-items-center justify-content-center" style={{ paddingTop: '56px', paddingBottom: '56px', height: '100vh', overflow: 'hidden' }}>
+
         <Header onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} theme={theme} />
         <div className="flex-grow-1 d-flex align-items-center justify-content-center" style={{ paddingTop: '56px', paddingBottom: '56px', height: '100vh', overflow: 'hidden' }}>
   <div className="container scrollable-container">

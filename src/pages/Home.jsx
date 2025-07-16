@@ -6,21 +6,38 @@ export default function Home() {
     : 'https://via.placeholder.com/150';
 
   return (
-    <div className="text-center">
-      <img src={profileImg} alt="Profile" className="rounded-circle mb-3" style={{ width: 150, height: 150, objectFit: 'cover' }} />
-      <h2>{personalInfo.name}</h2>
-      <p className="mb-1">📞 {personalInfo.phone} | 📧 {personalInfo.email}</p>
-     
-      {personalInfo.summary.split('\n\n').map((para, index) => (
-  <p className="lead mt-4" key={index}>{para}</p>
-))}
-      <div className="mt-4">
-        {personalInfo.social.map((s, i) => (
-          <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary mx-2">
-            {s.name}
-          </a>
-        ))}
+    <div className="container">
+      <div className="row justify-content-center py-5">
+        <div className="col-12 col-md-10 col-lg-8 text-center">
+          <img
+            src={profileImg}
+            alt="Profile"
+            className="rounded-circle mb-3"
+            style={{ width: 150, height: 150, objectFit: 'cover' }}
+          />
+          <h2>{personalInfo.name}</h2>
+
+          {personalInfo.summary.split('\n').map((para, index) => (
+            <p className="lead mt-4" key={index}>
+              {para}
+            </p>
+          ))}
+
+          <div className="mt-4 d-flex flex-wrap justify-content-center gap-3">
+            {personalInfo.social.map((s, i) => (
+              <a
+                key={i}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline-primary"
+              >
+                {s.name}
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
-} 
+}
