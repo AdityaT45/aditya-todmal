@@ -10,6 +10,18 @@ export const personalInfo = {
   ],
 };
 
+export const contact = {
+  email: "adityatodmal47@gmail.com",
+  phone: "+91 8275742916",
+  social: [
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/aditya-todmal-3aa486255", icon: "bi bi-linkedin" },
+    { name: "GitHub", url: "https://github.com/AdityaT45", icon: "bi bi-github" },
+    { name: "X", url: "https://x.com/", icon: "bi bi-twitter-x" },
+    { name: "Instagram", url: "https://instagram.com/", icon: "bi bi-instagram" },
+    { name: "WhatsApp", url: "https://wa.me/918275742916", icon: "bi bi-whatsapp" },
+  ]
+};
+
 export const skills = [
   {
     group: "Frontend",
@@ -178,108 +190,158 @@ export const skills = [
 ];
 
 export const projects = [
+  // MERN STACK
   {
-    title: 'PageTurner – Online E-commerce Book Shop',
-    tech: ['HTML', 'CSS', 'Bootstrap', 'PHP', 'MySQL'],
-    description: [
-      'Developed a web-based book-selling platform with admin, user, and staff modules.',
-      'Integrated Razorpay for secure online payments.',
-      'Admin can manage books, users, and staff, while staff handles listings and deliveries.',
-      'Users can browse, add to cart, and purchase books easily.'
+    name: "PageTurner – Online E-commerce Book Shop",
+    category: "MERN STACK",
+    images: ["bookshop1.png", "bookshop2.png"],
+    technologies: [
+      { name: "React", icon: "react.png" },
+      { name: "Node.js", icon: "nodejs.png" },
+      { name: "Express.js", icon: "express.png" },
+      { name: "MongoDB", icon: "mongodb.png" },
     ],
-    image: 'https://via.placeholder.com/200x120?text=Book+Shop',
+    description: [
+      "Developed a full-featured book-selling platform with admin, user, and staff modules.",
+      "Integrated Razorpay for secure payments and streamlined order management."
+    ],
+    github: "https://github.com/AdityaT45/pageturner",
+    live: "https://pageturner.live/"
   },
   {
-    title: 'PageTurner – Online E-commerce Book Shop',
-    tech: ['HTML', 'CSS', 'Bootstrap', 'PHP', 'MySQL'],
-    description: [
-      'Developed a web-based book-selling platform with admin, user, and staff modules.',
-      'Integrated Razorpay for secure online payments.',
-      'Admin can manage books, users, and staff, while staff handles listings and deliveries.',
-      'Users can browse, add to cart, and purchase books easily.'
+    name: "PageTurner – Online E-commerce Book Shop",
+    category: "MERN STACK",
+    images: ["bookshop1.png", "bookshop2.png"],
+    technologies: [
+      { name: "React", icon: "react.png" },
+      { name: "Node.js", icon: "nodejs.png" },
+      { name: "Express.js", icon: "express.png" },
+      { name: "MongoDB", icon: "mongodb.png" },
     ],
-    image: 'https://via.placeholder.com/200x120?text=Book+Shop',
+    description: [
+      "Developed a full-featured book-selling platform with admin, user, and staff modules.",
+      "Integrated Razorpay for secure payments and streamlined order management."
+    ],
+    github: "https://github.com/AdityaT45/pageturner",
+    live: "https://pageturner.live/"
   },
   {
-    title: 'PageTurner – Online E-commerce Book Shop',
-    tech: ['HTML', 'CSS', 'Bootstrap', 'PHP', 'MySQL'],
-    description: [
-      'Developed a web-based book-selling platform with admin, user, and staff modules.',
-      'Integrated Razorpay for secure online payments.',
-      'Admin can manage books, users, and staff, while staff handles listings and deliveries.',
-      'Users can browse, add to cart, and purchase books easily.'
+    name: "PageTurner ",
+    category: "MERN STACK",
+    images: ["p1.jpg", "p2.jpg"],
+    technologies: [
+      { name: "React", icon: "p1.jpg" },
+      { name: "Node.js", icon: "profile.png" },
+      { name: "Express.js", icon: "express.png" },
+      { name: "MongoDB", icon: "mongodb.png" },
     ],
-    image: 'https://via.placeholder.com/200x120?text=Book+Shop',
+    description: [
+      "Developed a full-featured book-selling platform with admin, user, and staff modules.",
+      "Integrated Razorpay for secure payments and streamlined order management."
+    ],
+    github: "https://github.com/AdityaT45/pageturner",
+    live: "https://pageturner.live/"
+  },
+  // PHP PROJECT
+  {
+    name: "Exam Hall Management System",
+    category: "PHP PROJECT",
+    images: ["examhall1.png", "examhall2.png"],
+    technologies: [
+      { name: "HTML", icon: "html.png" },
+      { name: "CSS", icon: "css.png" },
+      { name: "Bootstrap", icon: "bootstrap.png" },
+      { name: "PHP", icon: "php.png" },
+      { name: "MySQL", icon: "mysql.png" },
+    ],
+    description: [
+      "Automated hall allocation and report generation for exam management.",
+      "Improved efficiency for staff and reduced manual errors."
+    ],
+    github: "https://github.com/AdityaT45/examhall",
+    live: "https://examhall.live/"
+  },
+  // MOBILE APPS
+  {
+    name: "Mess Management System (Mobile App)",
+    category: "MOBILE APPS",
+    images: ["messapp1.png", "messapp2.png"],
+    technologies: [
+      { name: "React Native", icon: "react-native.png" },
+      { name: "Node.js", icon: "nodejs.png" },
+      { name: "Express.js", icon: "express.png" },
+      { name: "MongoDB", icon: "mongodb.png" },
+    ],
+    description: [
+      "Mobile app for hostel students and mess owners to manage menus and interests.",
+      "Real-time updates and secure data management."
+    ],
+    github: "https://github.com/AdityaT45/messapp",
+    live: "https://messapp.live/"
+  },
+  // UI DESIGN
+  {
+    name: "Portfolio UI Design",
+    category: "UI DESIGN",
+    images: ["p1.jpg", "p2.jpg"],
+    technologies: [
+      { name: "Figma", icon: "figma.png" },
+      { name: "Material-UI", icon: "mui.png" },
+    ],
+    description: [
+      "Designed a modern, responsive portfolio UI in Figma.",
+      "Focused on usability, accessibility, and visual appeal."
+    ],
+    github: "https://github.com/AdityaT45/portfolio-ui",
+    live: "https://portfolio-ui.live/"
+  },
+  // Add more projects as needed...
+];
+
+export const experience = [
+  {
+    company: "Brightlink Infotech",
+    image: "brightlink.png",
+    role: "Frontend Developer Intern",
+    time: "April 2025 to June 2025"
   },
   {
-    title: 'Mess Management System (Mobile App)',
-    tech: ['React Native', 'Node.js', 'Express.js', 'MongoDB'],
-    description: [
-      'Built a mobile-based system to simplify mess selection for hostel students and mess owners.',
-      'Features include real-time menu updates, interest tracking, and secure data management.',
-      'Improved operational efficiency and enabled better decision-making through a user-friendly interface.'
-    ],
-    image: 'https://via.placeholder.com/200x120?text=Mess+App',
-  },
-  {
-    title: 'Exam Hall Management System',
-    tech: ['HTML', 'CSS', 'Bootstrap', 'PHP', 'MySQL'],
-    description: [
-      'Designed a system to allocate students, staff, and rooms efficiently during exams.',
-      'Automated hall scheduling and report generation to ease administrative tasks.',
-      'Streamlined administrative tasks and improved overall exam management operations.'
-    ],
-    image: 'https://via.placeholder.com/200x120?text=Exam+System',
-  },
+    company: "Brightlink Infotech",
+    image: "brightlink.png",
+    role: "Frontend Developer Intern",
+    time: "April 2025 to June 2025"
+  }
 ];
 
 export const education = [
   {
-    degree: 'MCA',
-    college: 'Sinhgad Institute of Management and Computer Application, Pune',
-    university: 'Savitribai Phule Pune University',
-    duration: 'Aug 2023 - May 2025',
-    score: '7.09 CGPA (First Class)'
+    degree: "MCA",
+    college: "Sinhgad Institute of Management and Computer Application, Pune",
+    university: "Savitribai Phule Pune University",
+    duration: "Aug 2023 - May 2025",
+    score: "7.09 CGPA (First Class)",
+    logo: "sinhgad.png"
   },
   {
-    degree: 'MCA',
-    college: 'Sinhgad Institute of Management and Computer Application, Pune',
-    university: 'Savitribai Phule Pune University',
-    duration: 'Aug 2023 - May 2025',
-    score: '7.09 CGPA (First Class)'
+    degree: "BCS",
+    college: "New Arts, Commerce and Science College, Ahmednagar",
+    university: "Savitribai Phule Pune University",
+    duration: "Aug 2020 - Jun 2023",
+    score: "7.76 CGPA (First Class)",
+    logo: "newarts.png"
   },
   {
-    degree: 'MCA',
-    college: 'Sinhgad Institute of Management and Computer Application, Pune',
-    university: 'Savitribai Phule Pune University',
-    duration: 'Aug 2023 - May 2025',
-    score: '7.09 CGPA (First Class)'
+    degree: "HSC",
+    college: "New Arts, Commerce and Science College, Ahmednagar",
+    duration: "Jun 2019 - Mar 2020",
+    score: "72.77%",
+    logo: "newarts.png"
   },
   {
-    degree: 'MCA',
-    college: 'Sinhgad Institute of Management and Computer Application, Pune',
-    university: 'Savitribai Phule Pune University',
-    duration: 'Aug 2023 - May 2025',
-    score: '7.09 CGPA (First Class)'
-  },
-  
-  {
-    degree: 'BCS',
-    college: 'New Arts, Commerce and Science College, Ahmednagar',
-    university: 'Savitribai Phule Pune University',
-    duration: 'Aug 2020 - Jun 2023',
-    score: '7.76 CGPA (First Class)'
-  },
-  {
-    degree: 'HSC',
-    college: 'New Arts, Commerce and Science College, Ahmednagar',
-    duration: 'Jun 2019 - Mar 2020',
-    score: '72.77%'
-  },
-  {
-    degree: 'SSC',
-    college: 'New English School, Wakodi',
-    duration: 'Jun 2017 - Mar 2018',
-    score: '87.40%'
-  },
+    degree: "SSC",
+    college: "New English School, Wakodi",
+    duration: "Jun 2017 - Mar 2018",
+    score: "87.40%",
+    logo: "wakodi.png"
+  }
 ]; 

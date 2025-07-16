@@ -15,8 +15,9 @@ export default function Header({ onToggleTheme, theme }) {
             <li className="nav-item"><Link className={`nav-link${location.pathname==='/'?' active':''}`} to="/">Home</Link></li>
             <li className="nav-item"><Link className={`nav-link${location.pathname==='/skills'?' active':''}`} to="/skills">Skills</Link></li>
             <li className="nav-item"><Link className={`nav-link${location.pathname==='/projects'?' active':''}`} to="/projects">Projects</Link></li>
-            <li className="nav-item"><Link className={`nav-link${location.pathname==='/education'?' active':''}`} to="/education">Education</Link></li>
+          
             <li className="nav-item"><Link className={`nav-link${location.pathname==='/experience'?' active':''}`} to="/experience">Experience</Link></li>
+            <li className="nav-item"><Link className={`nav-link${location.pathname==='/education'?' active':''}`} to="/education">Education</Link></li>
             <li className="nav-item"><Link className={`nav-link${location.pathname==='/contact'?' active':''}`} to="/contact">Contact</Link></li>
           </ul>
           <button className="btn btn-outline-light ms-3" onClick={onToggleTheme} title="Toggle theme">
