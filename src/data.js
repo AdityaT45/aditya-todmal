@@ -2,7 +2,7 @@ export const personalInfo = {
   name: 'Aditya Todmal',
   phone: '+91 8275742916',
   email: 'adityatodmal47@gmail.com',
-  profileImage: 'a5.jpg',
+  profileImage: 'me.png',
  summary: "Hello! I'm Aditya Todmal, a dedicated Full Stack Developer with a strong interest in building practical and efficient web and mobile applications. I specialize in the MERN stack and have hands-on experience with MySQL, MongoDB, and React Native.\n\nI enjoy solving real-world problems through code and continuously improving my development skills. Currently, I'm exploring tools like Material-UI and TypeScript to enhance frontend performance and maintainability. Passionate about learning and team collaboration, I aim to contribute meaningfully to every project I work on.\n\nLet’s connect!",
   social: [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/aditya-todmal-3aa486255' },
@@ -17,7 +17,7 @@ export const contact = {
     { name: "LinkedIn", url: "https://www.linkedin.com/in/aditya-todmal-3aa486255", icon: "bi bi-linkedin" },
     { name: "GitHub", url: "https://github.com/AdityaT45", icon: "bi bi-github" },
     { name: "X", url: "https://x.com/", icon: "bi bi-twitter-x" },
-    { name: "Instagram", url: "https://instagram.com/", icon: "bi bi-instagram" },
+    { name: "Instagram", url: "https://www.instagram.com/its_adi_todmal/", icon: "bi bi-instagram" },
     { name: "WhatsApp", url: "https://wa.me/918275742916", icon: "bi bi-whatsapp" },
   ]
 };
@@ -29,59 +29,59 @@ export const skills = [
     items: [
       {
         name: "HTML",
-        icon: "profile.png",
-        level: 95,
+        icon: "html.png",
+        level: 80,
         color: "#e44d26",
-        info: "3 years experience, used in 10+ projects"
+        // info: "3 years experience, used in 10+ projects"
       },
       {
         name: "CSS",
         icon: "css.png",
-        level: 90,
+        level: 85,
         color: "#264de4",
-        info: "3 years experience, used in 10+ projects"
+        // info: "3 years experience, used in 10+ projects"
       },
       {
         name: "Bootstrap",
-        icon: "profile.png",
-        level: 85,
+        icon: "bootstrap.png",
+        level: 80,
         color: "#7952b3",
-        info: "2 years experience, used in 6+ projects"
+        // info: "2 years experience, used in 6+ projects"
       },
       {
         name: "JavaScript",
-        icon: "a5.jpg",
-        level: 90,
+        icon: "js.png",
+        level: 60,
         color: "#f7df1e",
-        info: "3 years experience, used in 8+ projects"
+        // info: "3 years experience, used in 8+ projects"
       },
       {
         name: "TypeScript",
-        icon: "typescript.png",
-        level: 70,
+        icon: "ts.png",
+        level: 50,
         color: "#3178c6",
         info: "1 year experience, currently learning advanced concepts"
       },
       {
         name: "React",
         icon: "react.png",
-        level: 85,
+        level: 55,
         color: "#61dafb",
-        info: "2 years experience, used in 5+ projects"
+        // info: "2 years experience, used in 5+ projects"
       },
       {
         name: "React Native",
-        icon: "react-native.png",
-        level: 60,
+        icon: "rn.png",
+        level: 40,
         color: "#61dafb",
-        info: "1 year experience, used in 2 projects"
+        // info: "1 year experience, used in 2 projects"
       },
       {
         name: "Material-UI",
         icon: "mui.png",
-        level: 75,
+        level: 45,
         color: "#0081cb",
-        info: "1 year experience, used in 2 projects"
+        // info: "1 year experience, used in 2 projects"
       }
     ]
   },
@@ -91,38 +91,32 @@ export const skills = [
     items: [
       {
         name: "Node.js",
-        icon: "nodejs.png",
-        level: 80,
+        icon: "node.png",
+        level: 50,
         color: "#3c873a",
-        info: "2 years experience, used in 5+ projects"
+        // info: "2 years experience, used in 5+ projects"
       },
       {
         name: "Express.js",
-        icon: "express.png",
-        level: 75,
-        color: "#000000",
-        info: "2 years experience, used in 4+ projects"
+        icon: "ex.png",
+        level: 45,
+        color: "#f7df1e",
+        // info: "2 years experience, used in 4+ projects"
       },
-      {
-        name: "Core Java",
-        icon: "java.png",
-        level: 70,
-        color: "#f89820",
-        info: "2 years experience, used in 3 projects"
-      },
+    
       {
         name: "RESTful APIs",
         icon: "api.png",
-        level: 80,
+        level: 50,
         color: "#01c3a8",
-        info: "2 years experience, used in 5+ projects"
+        // info: "2 years experience, used in 5+ projects"
       },
       {
         name: "SQL",
         icon: "sql.png",
-        level: 75,
+        level: 45,
         color: "#336791",
-        info: "2 years experience, used in 4+ projects"
+        // info: "2 years experience, used in 4+ projects"
       }
     ]
   },
@@ -133,16 +127,16 @@ export const skills = [
       {
         name: "MySQL",
         icon: "mysql.png",
-        level: 80,
+        level: 50,
         color: "#00758f",
-        info: "2 years experience, used in 4+ projects"
+        // info: "2 years experience, used in 4+ projects"
       },
       {
         name: "MongoDB",
-        icon: "mongodb.png",
-        level: 70,
+        icon: "mongo.png",
+        level: 40,
         color: "#47a248",
-        info: "1.5 years experience, used in 3 projects"
+        // info: "1.5 years experience, used in 3 projects"
       }
     ]
   },
@@ -153,20 +147,20 @@ export const skills = [
       {
         name: "Git",
         icon: "git.png",
-        level: 85,
+        level: 65,
         color: "#f34f29",
-        info: "2 years experience, used in all projects"
+        // info: "2 years experience, used in all projects"
       },
       {
         name: "GitHub",
-        icon: "github.png",
-        level: 85,
-        color: "#333",
-        info: "2 years experience, used in all projects"
+        icon: "gith.png",
+        level: 70,
+        color: "#3c873a",
+        // info: "2 years experience, used in all projects"
       },
       {
         name: "VS Code",
-        icon: "vscode.png",
+        icon: "vs.png",
         level: 90,
         color: "#0078d7",
         info: "2 years experience, used daily"
@@ -174,16 +168,30 @@ export const skills = [
       {
         name: "Postman",
         icon: "postman.png",
-        level: 75,
+        level: 70,
         color: "#ff6c37",
-        info: "1.5 years experience, used in 3+ projects"
+        // info: "1.5 years experience, used in 3+ projects"
       },
       {
         name: "Figma",
         icon: "figma.png",
         level: 60,
         color: "#a259ff",
-        info: "1 year experience, used for UI design"
+        // info: "1 year experience, used for UI design"
+      },
+      {
+        name: "Photoshop",
+        icon: "ps.png",
+        level: 80,
+        color: "#0078d7",
+        // info: "1 year experience, used for UI design"
+      },
+      {
+        name: "Corel Draw",
+        icon: "corel.png",
+        level: 70,
+        color: "#47a248",
+        // info: "1 year experience, used for UI design"
       }
     ]
   }
@@ -191,62 +199,48 @@ export const skills = [
 
 export const projects = [
   // MERN STACK
+  
   {
-    name: "PageTurner – Online E-commerce Book Shop",
+    name: "Vastra-shuddhi",
     category: "MERN STACK",
-    images: ["bookshop1.png", "bookshop2.png"],
+    images: ["vs1.png","vs2.png","vs3.png","vs4.png","vs5.png"],
     technologies: [
       { name: "React", icon: "react.png" },
-      { name: "Node.js", icon: "nodejs.png" },
-      { name: "Express.js", icon: "express.png" },
-      { name: "MongoDB", icon: "mongodb.png" },
+      { name: "Node.js", icon: "node.png" },
+      { name: "Express.js", icon: "ex.png" },
+      { name: "MongoDB", icon: "mongo.png" },
     ],
     description: [
-      "Developed a full-featured book-selling platform with admin, user, and staff modules.",
-      "Integrated Razorpay for secure payments and streamlined order management."
+      "Vastrashuddhi is a digital platform connecting users with local laundry services.",
+      "Supports service booking, real-time tracking, secure payments, and customer feedback."
     ],
-    github: "https://github.com/AdityaT45/pageturner",
-    live: "https://pageturner.live/"
+    github: "",
+    live: ""
   },
-  {
-    name: "PageTurner – Online E-commerce Book Shop",
-    category: "MERN STACK",
-    images: ["bookshop1.png", "bookshop2.png"],
-    technologies: [
-      { name: "React", icon: "react.png" },
-      { name: "Node.js", icon: "nodejs.png" },
-      { name: "Express.js", icon: "express.png" },
-      { name: "MongoDB", icon: "mongodb.png" },
-    ],
-    description: [
-      "Developed a full-featured book-selling platform with admin, user, and staff modules.",
-      "Integrated Razorpay for secure payments and streamlined order management."
-    ],
-    github: "https://github.com/AdityaT45/pageturner",
-    live: "https://pageturner.live/"
-  },
-  {
-    name: "PageTurner ",
-    category: "MERN STACK",
-    images: ["p1.jpg", "p2.jpg"],
-    technologies: [
-      { name: "React", icon: "p1.jpg" },
-      { name: "Node.js", icon: "profile.png" },
-      { name: "Express.js", icon: "express.png" },
-      { name: "MongoDB", icon: "mongodb.png" },
-    ],
-    description: [
-      "Developed a full-featured book-selling platform with admin, user, and staff modules.",
-      "Integrated Razorpay for secure payments and streamlined order management."
-    ],
-    github: "https://github.com/AdityaT45/pageturner",
-    live: "https://pageturner.live/"
-  },
+  
   // PHP PROJECT
+  {
+    name: "PageTurner – Online E-commerce Book Shop",
+    category: "PHP PROJECT",
+    images: ["pt1.png","pt2.png","pt3.png","pt4.png","pt5.png",],
+    technologies: [
+      { name: "HTML", icon: "html.png" },
+      { name: "CSS", icon: "css.png" },
+      { name: "Bootstrap", icon: "bootstrap.png" },
+      { name: "PHP", icon: "php.png" },
+      { name: "MySQL", icon: "mysql.png" },
+    ],
+    description: [
+      "Developed a full-featured book-selling platform with admin, user, and staff modules.",
+      "Integrated Razorpay for secure payments and streamlined order management."
+    ],
+    github: "https://github.com/AdityaT45/Page_Turner/tree/main",
+    live: ""
+  },
   {
     name: "Exam Hall Management System",
     category: "PHP PROJECT",
-    images: ["examhall1.png", "examhall2.png"],
+    images: ["eh1.png","eh2.png","eh3.png",],
     technologies: [
       { name: "HTML", icon: "html.png" },
       { name: "CSS", icon: "css.png" },
@@ -256,44 +250,80 @@ export const projects = [
     ],
     description: [
       "Automated hall allocation and report generation for exam management.",
-      "Improved efficiency for staff and reduced manual errors."
+      "Improved efficiency for staff and reduced manual errors.",
+      "Streamlined administrative tasks and improved overall exam management operations"
     ],
-    github: "https://github.com/AdityaT45/examhall",
-    live: "https://examhall.live/"
+    github: "https://github.com/AdityaT45/exam_hall_managment_system",
+    live: ""
   },
   // MOBILE APPS
   {
     name: "Mess Management System (Mobile App)",
     category: "MOBILE APPS",
-    images: ["messapp1.png", "messapp2.png"],
+    images: ["cmm1.jpg", "cmm2.jpg","cmm3.jpg"],
     technologies: [
-      { name: "React Native", icon: "react-native.png" },
-      { name: "Node.js", icon: "nodejs.png" },
-      { name: "Express.js", icon: "express.png" },
-      { name: "MongoDB", icon: "mongodb.png" },
+      { name: "React Native", icon: "rn.png" },
+      { name: "Node.js", icon: "node.png" },
+      { name: "Express.js", icon: "ex.png" },
+      { name: "MongoDB", icon: "mongo.png" },
     ],
     description: [
       "Mobile app for hostel students and mess owners to manage menus and interests.",
       "Real-time updates and secure data management."
     ],
-    github: "https://github.com/AdityaT45/messapp",
-    live: "https://messapp.live/"
+    github: "https://github.com/AdityaT45/check-my-mess",
+    live: ""
   },
   // UI DESIGN
   {
-    name: "Portfolio UI Design",
+    name: "fillow ui",
     category: "UI DESIGN",
-    images: ["p1.jpg", "p2.jpg"],
+    images: ["fl1.png","fl2.png","fl3.png",],
     technologies: [
-      { name: "Figma", icon: "figma.png" },
+      { name: "React", icon: "react.png" },
+      { name: "Typescript", icon: "ts.png" },
       { name: "Material-UI", icon: "mui.png" },
     ],
     description: [
-      "Designed a modern, responsive portfolio UI in Figma.",
-      "Focused on usability, accessibility, and visual appeal."
+     "Used prop drilling to render components dynamically from JSON data.",
+  "clean aesthetics, mobile responsiveness, accessibility, and user-friendly interactions to enhance the overall user experience."
     ],
-    github: "https://github.com/AdityaT45/portfolio-ui",
-    live: "https://portfolio-ui.live/"
+    github: "https://github.com/AdityaT45/fillow_website_ui",
+    live: "https://fillowui.netlify.app/"
+  },
+
+  {
+    name: "Digital Wedding Invitation Card",
+    category: "UI DESIGN",
+    images: ["wic1.jpg","wic2.jpg"],
+    technologies: [
+      { name: "Html", icon: "html.png" },
+      { name: "Css", icon: "css.png" },
+      { name: "Bootstrap", icon: "bootstrap.png" },
+      { name: "Javascript", icon: "js.png" },
+    ],
+    description: [
+     "Designed a beautiful and responsive digital wedding invitation using HTML, CSS, Bootstrap, and JavaScript.",
+  "Focused on elegant layout, smooth animations, and mobile-friendly design."
+    ],
+    github: "",
+    live: "https://swapnil-wedding.netlify.app/#"
+  },
+  {
+    name: "weshare",
+    category: "UI DESIGN",
+    images: ["ws1.png","ws2.jpg","ws3.jpg",],
+    technologies: [
+      { name: "React", icon: "react.png" },
+      { name: "Typescript", icon: "ts.png" },
+      { name: "Material-UI", icon: "mui.png" },
+    ],
+    description: [
+     "Used prop drilling to render components dynamically from JSON data.",
+  "clean aesthetics, mobile responsiveness, accessibility, and user-friendly interactions to enhance the overall user experience."
+    ],
+    github: "https://github.com/AdityaT45/fillow_website_ui",
+    live: "https://fillowui.netlify.app/"
   },
   // Add more projects as needed...
 ];
@@ -301,13 +331,7 @@ export const projects = [
 export const experience = [
   {
     company: "Brightlink Infotech",
-    image: "brightlink.png",
-    role: "Frontend Developer Intern",
-    time: "April 2025 to June 2025"
-  },
-  {
-    company: "Brightlink Infotech",
-    image: "brightlink.png",
+    image: "a5.jpg",
     role: "Frontend Developer Intern",
     time: "April 2025 to June 2025"
   }
@@ -320,7 +344,7 @@ export const education = [
     university: "Savitribai Phule Pune University",
     duration: "Aug 2023 - May 2025",
     score: "7.09 CGPA (First Class)",
-    logo: "sinhgad.png"
+    logo: "sinhgad.jpg"
   },
   {
     degree: "BCS",
@@ -328,20 +352,7 @@ export const education = [
     university: "Savitribai Phule Pune University",
     duration: "Aug 2020 - Jun 2023",
     score: "7.76 CGPA (First Class)",
-    logo: "newarts.png"
+    logo: "necsa.png"
   },
-  {
-    degree: "HSC",
-    college: "New Arts, Commerce and Science College, Ahmednagar",
-    duration: "Jun 2019 - Mar 2020",
-    score: "72.77%",
-    logo: "newarts.png"
-  },
-  {
-    degree: "SSC",
-    college: "New English School, Wakodi",
-    duration: "Jun 2017 - Mar 2018",
-    score: "87.40%",
-    logo: "wakodi.png"
-  }
+  
 ]; 

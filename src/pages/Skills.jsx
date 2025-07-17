@@ -26,7 +26,7 @@ function CircularProgress({ value, color }) {
         cx={35}
         cy={35}
         r={radius}
-        stroke="#232526"
+        stroke="#c9cdd1"
         strokeWidth={stroke}
         fill="none"
       />
@@ -58,17 +58,17 @@ export default function Skills() {
 
   return (
     <div className="d-flex flex-column gap-4">
+      <h2 className="mb-2 text-center">Skills</h2>
       {skills.map((cat, i) => (
         <div
-          className="card p-4 mb-3 w-100"
+          className="card custom-card p-4 mb-3 w-100"
           key={i}
-          style={{background: 'rgba(24,18,43,0.7)', borderRadius: 24, boxShadow: '0 4px 32px 0 #01c3a822, 0 0 0 2px #a259ff33'}}
         >
           <div className="d-flex justify-content-center mb-3">
   <h3 className="mb-0 text-center" style={{ color: '#fff' }}>{cat.group}</h3>
 </div>
 
-          <div className="d-flex flex-wrap justify-content-center gap-4">
+          <div className="skills-grid">
   {cat.items.map((skill, j) => (
     <div
       key={j}

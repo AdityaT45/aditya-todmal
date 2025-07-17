@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      <div className="row justify-content-center py-5">
+      <div className="row justify-content-center pt-1">
         <div className="col-12 col-md-10 col-lg-8 text-center">
           <img
             src={profileImg}

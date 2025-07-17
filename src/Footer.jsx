@@ -1,8 +1,8 @@
 const socials = [
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/aditya-todmal-3aa486255', icon: 'bi bi-linkedin', alt: 'LinkedIn' },
   { name: 'X', url: 'https://x.com/', icon: 'bi bi-twitter-x', alt: 'X (Twitter)' },
-  { name: 'Instagram', url: 'https://instagram.com/', icon: 'bi bi-instagram', alt: 'Instagram' },
-  { name: 'WhatsApp', url: 'https://wa.me/', icon: 'bi bi-whatsapp', alt: 'WhatsApp' },
+  { name: 'Instagram', url: 'https://www.instagram.com/its_adi_todmal/', icon: 'bi bi-instagram', alt: 'Instagram' },
+  { name: 'WhatsApp', url: 'https://wa.me/918275742916', icon: 'bi bi-whatsapp', alt: 'WhatsApp' },
   { name: 'Gmail', url: 'https://mail.google.com/', icon: 'bi bi-envelope', alt: 'Gmail' },
   { name: 'Phone', url: 'https://wa.me/', icon: 'bi bi-telephone', alt: 'Phone' },
   { name: 'GitHub', url: 'https://github.com/AdityaT45', icon: 'bi bi-github', alt: 'GitHub' }
@@ -18,7 +18,8 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <div className="me-3">© {new Date().getFullYear()} All Rights Reserved.</div>
+      <div className="me-3">© {new Date().getFullYear()} • Built with React & passion by Aditya T.</div>
+
     </footer>
   );
 } 

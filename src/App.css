@@ -6,16 +6,7 @@
 }
 
 
-.scrollable-container {
-  height: 100%;
-  overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE/Edge */
-}
 
-.scrollable-container::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
-}
 
 
 .logo {
@@ -65,15 +56,24 @@
 }
 
 body.theme-dark {
-  background:
-    linear-gradient(135deg, #040404 0%, #1c132b 100%),
-    url("https://www.transparenttextures.com/patterns/arches.png");
-  background-repeat: repeat;
+  position: relative;
+  background: linear-gradient(135deg, #040404 0%, #1c132b 100%);
   color: #fff;
-  background-size: auto; /* or 'cover' or a specific size */
-background-blend-mode: overlay; /* optional: for better effect */
-
+  overflow-x: hidden; /* Optional */
 }
+
+body.theme-dark::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/arches.png") repeat;
+  filter: brightness(0) invert(1); /* Makes pattern appear white */
+  mix-blend-mode: screen;
+  opacity: 0.35; /* Adjust visibility */
+  z-index: 0;
+  pointer-events: none;
+}
+
 
 body.theme-dark .navbar {
   background: #18122B !important;
@@ -249,6 +249,36 @@ body.theme-light {
   }
 }
 
+@media (max-width: 991.98px) {
+  .footer {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.85rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    flex-direction: column !important;
+    gap: 0.25rem;
+  }
+  .footer .social-icons {
+    gap: 0.5rem !important;
+  }
+  .footer .social-icons a {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  .footer .social-icons i {
+    font-size: 0.95rem !important;
+  }
+  .footer .me-3 {
+    margin-right: 0 !important;
+    margin-top: 0.25rem;
+  }
+}
+
 .project-btn-group {
   background: #18122B;
   border-radius: 12px;
@@ -295,5 +325,248 @@ body.theme-light {
   .btn.project-btn {
     font-size: 0.95rem !important;
     padding: 0.5rem 0.5rem !important;
+  }
+}
+
+.custom-card {
+  border-radius: 20px !important;
+  box-shadow: 0 0 8px #a259ff, 0 4px 32px 0 #01c3a822 !important;
+  background: rgba(24,18,43,0.7) !important;
+  padding: 1.5rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-nav {
+  height: 54px;
+  z-index: 1050;
+  box-shadow: 0 -2px 12px #18122b33;
+  background: #18122B !important;
+  border-top: 1px solid #a259ff22;
+}
+.bottom-nav .nav-link {
+  color: #fff !important;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s;
+  margin: 0 2px;
+}
+.bottom-nav .nav-link.active, .bottom-nav .nav-link:focus, .bottom-nav .nav-link:hover {
+  color: #a259ff !important;
+  background: #23213a !important;
+}
+@media (min-width: 992px) {
+  .bottom-nav {
+    display: none !important;
+  }
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 0.5rem;
+    justify-items: center;
+  }
+  .skills-grid > div {
+    width: 100% !important;
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .project-btn-group {
+    max-width: 100% !important;
+    font-size: 0.85rem !important;
+    padding: 2px 2px !important;
+    gap: 0.25rem !important;
+  }
+  .btn.project-btn {
+    font-size: 0.85rem !important;
+    padding: 0.35rem 0.4rem !important;
+    min-width: 0 !important;
+    border-radius: 6px !important;
+    margin: 0 1px !important;
+  }
+  .custom-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    padding: 0.75rem 0.5rem 1.25rem 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+    overflow: visible !important;
+  }
+  .custom-card > div:first-child {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .custom-card .zoom-container {
+    width: 100% !important;
+    height: 180px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    border-radius: 16px !important;
+  }
+  .custom-card .flex-grow-1 {
+    width: 100% !important;
+    padding: 0.5rem 0 !important;
+  }
+  .custom-card h5 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .custom-card .btn {
+    font-size: 0.95rem !important;
+    min-width: 80px !important;
+    padding: 0.4rem 0.7rem !important;
+  }
+}
+
+.blink {
+  animation: blink-effect 0.4s linear 0s 5 alternate;
+}
+@keyframes blink-effect {
+  0% { background-color: #a259ff; color: #fff; }
+  100% { background-color: #fff; color: #a259ff; }
+}
+
+/* --- LIGHT THEME CARD CHANGES --- */
+.theme-light .card {
+  background: #fff !important;
+  color: #2D1B4A !important;
+  border: none !important;
+  box-shadow: 0 4px 24px 0 rgba(162, 89, 255, 0.10), 0 1.5px 8px 0 rgba(0,0,0,0.06) !important;
+}
+.theme-light .card * {
+  color: #2D1B4A !important;
+}
+.theme-light .card::before {
+  border: none !important;
+  background: none !important;
+}
+
+/* --- LIGHT THEME HEADER & FOOTER BRIGHTER --- */
+.theme-light .navbar {
+  background: #3e2e58 !important;
+  border-bottom: 1px solid #f7e6ff !important;
+}
+.theme-light .footer {
+  background: #3e2e58 !important;
+  border-top: 1px solid #f7e6ff !important;
+  color: #dfdfdf !important;
+}
+
+/* --- EXPERIENCE CARD STYLES --- */
+.experience-card {
+  min-height: 180px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 3px 4px 20px 0 #01c3a822, 0 0 0 2px #a259ff33;
+  background: rgba(24,18,43,0.7);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.theme-light .experience-card {
+  background: #fff !important;
+  box-shadow: 0 4px 24px 0 rgba(162, 89, 255, 0.10), 0 1.5px 8px 0 rgba(0,0,0,0.06) !important;
+  border: none !important;
+}
+.theme-dark .experience-card {
+  background: rgba(24,18,43,0.7) !important;
+  box-shadow: 0 4px 32px 0 #01c3a822, 0 0 0 2px #a259ff33 !important;
+  border: none !important;
+}
+
+.experience-img {
+  min-width: 90px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.experience-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #a259ff22;
+}
+
+/* Text styles for Experience card */
+.experience-company {
+  color: #fff;
+}
+.theme-light .experience-company {
+  color: #2D1B4A !important;
+}
+.theme-dark .experience-company {
+  color: #fff !important;
+}
+
+.experience-role {
+  color: #a259ff;
+  font-weight: 500;
+}
+.theme-light .experience-role {
+  color: #a259ff !important;
+}
+.theme-dark .experience-role {
+  color: #a259ff !important;
+}
+
+.experience-time {
+  color: #fff;
+  opacity: 0.8;
+}
+.theme-light .experience-time {
+  color: #2D1B4A !important;
+  opacity: 0.7;
+}
+.theme-dark .experience-time {
+  color: #fff !important;
+  opacity: 0.8;
+}
+
+@media (max-width: 767.98px) {
+  .experience-card {
+    min-width: unset !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 180px !important;
+    padding: 0.75rem 0.5rem 1.25rem 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+    overflow: visible !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .experience-img {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .experience-logo {
+    width: 70px !important;
+    height: 70px !important;
   }
 }

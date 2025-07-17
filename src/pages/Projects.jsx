@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { projects } from '../data';
+import Swal from 'sweetalert2';
+
 
 const categories = [
   'MERN STACK',
@@ -10,40 +12,45 @@ const categories = [
 
 export default function Projects() {
   const [selected, setSelected] = useState(categories[0]);
+  const [expanded, setExpanded] = useState({});
+  const [blinkUiDesign, setBlinkUiDesign] = useState(false);
+  const blinkTimeoutRef = useRef(null);
   const filtered = projects.filter(p => p.category === selected);
 
-  // Always render two columns per row, add placeholder if only one project
   const projectRows = [];
   for (let i = 0; i < filtered.length; i += 2) {
     const row = [filtered[i]];
-    if (filtered[i + 1]) {
-      row.push(filtered[i + 1]);
-    } else {
-      row.push(null); // placeholder
-    }
+    if (filtered[i + 1]) row.push(filtered[i + 1]);
+    else row.push(null);
     projectRows.push(row);
   }
 
+  const toggleExpand = (index) => {
+    setExpanded(prev => ({ ...prev, [index]: !prev[index] }));
+  };
+
   return (
     <div className="container" style={{ maxWidth: 1200, margin: '0 auto' }}>
-      {/* Button group for categories */}
+      <h2 className="mb-4 text-center">Projects</h2>
       <div className="d-flex justify-content-center mb-4">
-        <div className="btn-group w-100 project-btn-group" style={{ maxWidth: 900 }} role="group">
+        <div className="btn-group w-100 project-btn-group flex-wrap" style={{ maxWidth: 900 }} role="group">
           {categories.map(cat => (
             <button
               key={cat}
               type="button"
-              className={`btn project-btn${selected === cat ? ' active' : ''}`}
+              className={`btn project-btn${selected === cat ? ' active' : ''}${cat === 'UI DESIGN' && blinkUiDesign ? ' blink' : ''}`}
               onClick={() => setSelected(cat)}
               style={{
-                flex: '1 1 0',
-                whiteSpace: 'nowrap',
+                flex: '1 1 auto',
+                whiteSpace: 'normal',
                 textOverflow: 'ellipsis',
                 overflow: 'hidden',
-                fontSize: '0.875rem',
-                padding: '0.5rem 0.75rem',
+                fontSize: '0.8rem',
+                padding: '0.4rem 0.6rem',
+                wordBreak: 'break-word',
                 minWidth: 0,
                 maxWidth: '100%',
+                lineHeight: 1.2,
               }}
             >
               {cat}
@@ -51,35 +58,28 @@ export default function Projects() {
           ))}
         </div>
       </div>
-      {/* Projects grid: always two columns per row */}
+
       {projectRows.map((row, rowIdx) => (
-        <div className="row g-4 d-flex align-items-stretch justify-content-center" key={rowIdx}>
+        <div className="row g-4 d-flex align-items-stretch justify-content-center mb-4" key={rowIdx}>
           {row.map((project, colIdx) => (
             project ? (
-              <div
-                className="col-12 col-md-6 d-flex align-items-stretch justify-content-center"
-                key={colIdx}
-              >
+              <div className="col-12 col-md-6 d-flex align-items-stretch justify-content-center" key={colIdx}>
                 <div
-                  className="card h-100 d-flex flex-row"
+                  className="card custom-card h-100 d-flex flex-row"
                   style={{
-                    height: 'clamp(220px, 32vw, 320px)',
+                    height: window.innerWidth < 768 ? 'auto' : 'clamp(220px, 32vw, 320px)',
                     minHeight: 180,
                     marginBottom: 30,
                     width: '100%',
-                    background: 'rgba(24,18,43,0.7)',
-                    boxShadow: '0 4px 32px 0 #01c3a822, 0 0 0 2px #a259ff33',
-                    padding: '1rem',
-                    borderRadius: 20,
                     overflow: 'hidden',
                     minWidth: window.innerWidth < 768 ? 'unset' : 340,
                     maxWidth: window.innerWidth < 768 ? 'unset' : 540,
+                    flexDirection: window.innerWidth < 768 ? 'column' : 'row',
                   }}
                 >
-                  {/* Left: Image carousel */}
                   <div style={{
-                    width: window.innerWidth < 768 ? '100px' : '55%',
-                    minWidth: window.innerWidth < 768 ? 80 : 230,
+                    width: window.innerWidth < 768 ? '100%' : '55%',
+                    minWidth: window.innerWidth < 768 ? '100%' : 230,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -87,52 +87,89 @@ export default function Projects() {
                   }}>
                     <ProjectCarousel images={project.images} name={project.name} isMobile={window.innerWidth < 768} />
                   </div>
-                  {/* Right: Details */}
-                  <div style={{ width: window.innerWidth < 768 ? 'calc(100% - 100px)' : '45%' }} className="flex-grow-1 p-1 d-flex flex-column justify-content-between">
+                  <div style={{ width: window.innerWidth < 768 ? '100%' : '45%' }} className="flex-grow-1 p-2 d-flex flex-column justify-content-between">
                     <div>
-                      <h5 className="fw-bold mb-3" style={{ color: '#fff', fontSize: window.innerWidth < 768 ? '1.1rem' : undefined }}>{project.name}</h5>
-                      <div className="mb-3 d-flex flex-wrap align-items-center justify-content-center gap-3">
-                        {project.technologies && project.technologies.map((tech, j) => (
+                      <h5 className="fw-bold mb-2" style={{ color: '#fff', fontSize: window.innerWidth < 768 ? '1rem' : undefined }}>{project.name}</h5>
+                      <div className="mb-2 d-flex flex-wrap align-items-center justify-content-center gap-2">
+                        {project.technologies?.map((tech, j) => (
                           <img
                             key={j}
                             src={`/assets/${tech.icon}`}
                             alt={tech.name}
                             title={tech.name}
-                            style={{ width: 24, height: 24, borderRadius: 6 }}
+                            style={{ width: 20, height: 20, borderRadius: 4 }}
                           />
                         ))}
                       </div>
-                      <div className="mb-3" style={{ color: '#fff', fontSize: window.innerWidth < 768 ? '0.9rem' : '0.93rem', opacity: 0.85 }}>
-                        {project.description && project.description.slice(0, 2).map((line, k) => (
-                          <div key={k}>{line}</div>
-                        ))}
-                      </div>
+                      <div className="mb-2" style={{ color: '#fff', fontSize: window.innerWidth < 768 ? '0.8rem' : '0.93rem' }}>
+  {expanded[colIdx] ? (
+    project.description.join(' ')
+  ) : (
+    project.description.join(' ').split(' ').slice(0, 12).join(' ') + '...'
+  )}
+  {project.description.join(' ').split(' ').length > 12 && (
+    <span
+      onClick={() => toggleExpand(colIdx)}
+      style={{
+        color: '#a259ff', // use your preferred color
+        cursor: 'pointer',
+        marginLeft: 6,
+        opacity: 1, // set this explicitly
+        fontWeight: 500,
+      }}
+    >
+      {expanded[colIdx] ? 'View Less' : 'View More'}
+    </span>
+  )}
+</div>
+
                     </div>
                     <div className="d-flex gap-2 justify-content-center">
+                      <button
+                        className="btn btn-primary btn-sm px-1 py-1"
+                        style={{ minWidth: '70px', fontSize: window.innerWidth < 768 ? '0.75rem' : '0.9rem' }}
+                        onClick={() => {
+                          if (!project.live) {
+                            Swal.fire({
+                              icon: 'info',
+                              html: `
+                                <div style="font-size: 1rem;">
+                                  Only <strong style="color: #a259ff;">UI design</strong> projects are live!
+                                </div>
+                              `,
+                              confirmButtonColor: '#a259ff',
+                              width: window.innerWidth < 480 ? '90%' : '400px',
+                              customClass: {
+                                popup: 'swal2-mobile-font',
+                              },
+                            });
+                        
+                            setBlinkUiDesign(true);
+                            if (blinkTimeoutRef.current) clearTimeout(blinkTimeoutRef.current);
+                            blinkTimeoutRef.current = setTimeout(() => setBlinkUiDesign(false), 2000);
+                          } else {
+                            window.open(project.live, '_blank', 'noopener,noreferrer');
+                          }
+                        }}
+                        
+                        
+                      >
+                        <i className="bi bi-box-arrow-up-right me-1"></i>Live
+                      </button>
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-outline-primary btn-sm px-2 py-1"
-                        style={{ minWidth: '80px', fontSize: window.innerWidth < 768 ? '0.9rem' : undefined }}
+                        className="btn btn-outline-primary btn-sm px-1 py-1"
+                        style={{ minWidth: '70px', fontSize: window.innerWidth < 768 ? '0.75rem' : '0.9rem' }}
                       >
                         <i className="bi bi-github me-1"></i>GitHub
-                      </a>
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-primary btn-sm px-2 py-1"
-                        style={{ minWidth: '80px', fontSize: window.innerWidth < 768 ? '0.9rem' : undefined }}
-                      >
-                        <i className="bi bi-box-arrow-up-right me-1"></i>Live
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
             ) : (
-              // Placeholder for consistent spacing, hidden on mobile
               <div className="col-12 col-md-6 d-none d-md-flex align-items-stretch justify-content-center" style={{ visibility: 'hidden' }} key={colIdx}>
                 <div className="card project-placeholder-card w-100 h-100" style={{ background: 'transparent', border: 'none', boxShadow: 'none', minHeight: 180, maxHeight: 320, minWidth: 340 }}></div>
               </div>
@@ -180,11 +217,9 @@ function ProjectCarousel({ images, name, isMobile }) {
           alt={name}
           style={{
             width: '100%',
-            height: '100%',
+            // height: '100%',
             objectFit: 'cover',
-            transform: zoom && !isMobile
-              ? `scale(2.7) translate(${50 - position.x}%, ${50 - position.y}%)`
-              : 'scale(1)',
+            transform: zoom && !isMobile ? `scale(2.7) translate(${50 - position.x}%, ${50 - position.y}%)` : 'scale(1)',
             transition: zoom && !isMobile ? 'transform 0.1s' : 'transform 0.3s ease',
             pointerEvents: 'none',
           }}
@@ -193,7 +228,7 @@ function ProjectCarousel({ images, name, isMobile }) {
       {images.length > 1 && (
         <div className="d-flex justify-content-center gap-2 mt-2">
           <button
-            className="btn btn-sm btn-outline-light"
+            className="btn btn-sm btn-outline-light px-1 py-0"
             onClick={(e) => {
               e.stopPropagation();
               setIdx(idx === 0 ? images.length - 1 : idx - 1);
@@ -203,7 +238,7 @@ function ProjectCarousel({ images, name, isMobile }) {
             <i className="bi bi-chevron-left"></i>
           </button>
           <button
-            className="btn btn-sm btn-outline-light"
+            className="btn btn-sm btn-outline-light px-1 py-0"
             onClick={(e) => {
               e.stopPropagation();
               setIdx(idx === images.length - 1 ? 0 : idx + 1);
