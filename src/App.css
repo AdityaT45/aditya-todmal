@@ -5,6 +5,25 @@
   text-align: center;
 }
 
+.hidden-btn {
+  background: transparent !important;
+  color: red;
+  border: none !important;
+  box-shadow: none !important;
+  width: 100px;  /* clickable area width */
+  height: 40px;  /* clickable area height */
+  cursor: pointer;
+  position: absolute;  /* position it somewhere */
+
+
+  pointer-events: auto;
+  text-indent: -9999px; /* hide text */
+}
+.hidden-btn:hover {
+  background: transparent !important;
+  /* color: transparent !important; */
+}
+
 
 
 
@@ -285,6 +304,10 @@ body.theme-light {
   box-shadow: 0 2px 12px #18122b33;
   padding: 4px;
 }
+.theme-light .project-btn-group {
+  background: #564375;
+}
+
 .project-btn {
   background: transparent !important;
   color: #fff !important;

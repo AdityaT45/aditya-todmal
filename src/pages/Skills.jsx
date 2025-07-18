@@ -91,7 +91,7 @@ export default function Skills() {
             width: 42,
             height: 42,
             borderRadius: '50%',
-            background: '#18122B',
+            // background: '#18122B',
             padding: 2,
           }}
         />

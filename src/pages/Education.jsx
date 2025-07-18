@@ -22,8 +22,8 @@ export default function Education() {
                   width: 90,
                   height: 90,
                   borderRadius: '50%',
-                  background: '#18122B',
-                  boxShadow: '0 0 8px #a259ff',
+                  background: '#5a5a5a58',
+                  // boxShadow: '0 0 8px,
                 }}
               >
                 <img

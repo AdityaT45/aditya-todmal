@@ -36,6 +36,19 @@ export default function Home() {
               </a>
             ))}
           </div>
+          <div className="mt-2 mb-2 d-flex flex-wrap justify-content-center">
+  {personalInfo.hidden.map((h, i) => (
+    <a
+      key={i}
+      href={h.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hidden-btn"
+    >
+      {h.name}
+    </a>
+  ))}
+</div>
         </div>
       </div>
     </div>

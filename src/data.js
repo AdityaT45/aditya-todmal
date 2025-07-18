@@ -4,10 +4,14 @@ export const personalInfo = {
   email: 'adityatodmal47@gmail.com',
   profileImage: 'me.png',
  summary: "Hello! I'm Aditya Todmal, a dedicated Full Stack Developer with a strong interest in building practical and efficient web and mobile applications. I specialize in the MERN stack and have hands-on experience with MySQL, MongoDB, and React Native.\n\nI enjoy solving real-world problems through code and continuously improving my development skills. Currently, I'm exploring tools like Material-UI and TypeScript to enhance frontend performance and maintainability. Passionate about learning and team collaboration, I aim to contribute meaningfully to every project I work on.\n\nLet’s connect!",
-  social: [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/aditya-todmal-3aa486255' },
-    { name: 'GitHub', url: 'https://github.com/AdityaT45' },
-  ],
+ social: [
+  { name: 'View Resume', url: '/assets/AdityaTodmalv3.pdf' },
+  
+], hidden: [
+ 
+  { name: 'graaphic', url: '/assets/aditya_portfolio_final.pdf' },
+  
+],
 };
 
 export const contact = {
@@ -323,7 +327,7 @@ export const projects = [
   "clean aesthetics, mobile responsiveness, accessibility, and user-friendly interactions to enhance the overall user experience."
     ],
     github: "https://github.com/AdityaT45/fillow_website_ui",
-    live: "https://fillowui.netlify.app/"
+    live: "https://weshare1234.netlify.app/"
   },
   // Add more projects as needed...
 ];

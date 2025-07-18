@@ -26,6 +26,7 @@ export default function Header({ onToggleTheme, theme }) {
           <li className="nav-item"><Link className={`nav-link${location.pathname==='/experience'?' active':''}`} to="/experience">Experience</Link></li>
           <li className="nav-item"><Link className={`nav-link${location.pathname==='/education'?' active':''}`} to="/education">Education</Link></li>
           <li className="nav-item"><Link className={`nav-link${location.pathname==='/contact'?' active':''}`} to="/contact">Contact</Link></li>
+          <li className="nav-item"><Link className={`nav-link${location.pathname==='/contact'?' active':''}`} to="/contact"></Link></li>
         </ul>
         
       </div>
