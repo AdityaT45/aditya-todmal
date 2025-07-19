@@ -36,7 +36,7 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <div className="mt-2 mb-2 d-flex flex-wrap justify-content-center">
+          <div className="mt-2 mb-2 d-flex flex-wrap justify-content-start">
   {personalInfo.hidden.map((h, i) => (
     <a
       key={i}
