@@ -1,4 +1,9 @@
 import { personalInfo } from '../data';
+import { ReactTyped } from "react-typed";
+
+
+
+
 
 export default function Home() {
   const profileImg = personalInfo.profileImage
@@ -16,12 +21,49 @@ export default function Home() {
             style={{ width: 150, height: 150, objectFit: 'cover' }}
           />
           <h2>{personalInfo.name}</h2>
+          
 
-          {personalInfo.summary.split('\n').map((para, index) => (
-            <p className="lead mt-4" key={index}>
-              {para}
-            </p>
-          ))}
+{/* Typing effect before the first paragraph */}
+<p className="lead mt-4">
+  <ReactTyped
+    strings={["Hello..!", "नमस्कार..!", "नमस्ते..!"]}
+    typeSpeed={200}
+    backSpeed={50}
+    loop
+  />
+  &nbsp;
+  {personalInfo.summary
+    .split('\n')[0]
+    .split('Aditya Todmal')
+    .map((part, i, arr) =>
+      i < arr.length - 1 ? (
+        <>
+          {part}
+          <span style={{ color: '#a259ff', fontWeight: 'bold' }}>Aditya Todmal</span>
+        </>
+      ) : (
+        part
+      )
+    )}
+</p>
+
+{/* Remaining paragraphs without typing effect */}
+{personalInfo.summary.split('\n').slice(1).map((para, index) => (
+  <p className="lead mt-4" key={index}>
+    {para.split('Aditya Todmal').map((part, i, arr) =>
+      i < arr.length - 1 ? (
+        <>
+          {part}
+          <span style={{ color: '#a259ff', fontWeight: 'bold' }}>Aditya Todmal</span>
+        </>
+      ) : (
+        part
+      )
+    )}
+  </p>
+))}
+
+
 
           <div className="mt-4 d-flex flex-wrap justify-content-center gap-3">
             {personalInfo.social.map((s, i) => (

@@ -3,8 +3,6 @@ const socials = [
   { name: 'X', url: 'https://x.com/', icon: 'bi bi-twitter-x', alt: 'X (Twitter)' },
   { name: 'Instagram', url: 'https://www.instagram.com/its_adi_todmal/', icon: 'bi bi-instagram', alt: 'Instagram' },
   { name: 'WhatsApp', url: 'https://wa.me/918275742916', icon: 'bi bi-whatsapp', alt: 'WhatsApp' },
-  { name: 'Gmail', url: 'https://mail.google.com/', icon: 'bi bi-envelope', alt: 'Gmail' },
-  { name: 'Phone', url: 'https://wa.me/', icon: 'bi bi-telephone', alt: 'Phone' },
   { name: 'GitHub', url: 'https://github.com/AdityaT45', icon: 'bi bi-github', alt: 'GitHub' }
 ];
 

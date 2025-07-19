@@ -1,9 +1,9 @@
 export const personalInfo = {
-  name: 'Aditya Todmal',
+  name: 'Software Developer',
   phone: '+91 8275742916',
   email: 'adityatodmal47@gmail.com',
   profileImage: 'me.png',
- summary: "Hello! I'm Aditya Todmal, a dedicated Full Stack Developer with a strong interest in building practical and efficient web and mobile applications. I specialize in the MERN stack and have hands-on experience with MySQL, MongoDB, and React Native.\n\nI enjoy solving real-world problems through code and continuously improving my development skills. Currently, I'm exploring tools like Material-UI and TypeScript to enhance frontend performance and maintainability. Passionate about learning and team collaboration, I aim to contribute meaningfully to every project I work on.\n\nLet’s connect!",
+ summary: "I'm Aditya Todmal. a passionate Frontend & Full Stack Developer. I specialize in building modern, responsive web and mobile applications using React, React Native, Material-UI, TypeScript, Node.js, MySQL, and MongoDB.\nI love solving real-world problems through clean and efficient code while focusing on performance and great user experience. Currently, I'm exploring advanced frontend tools and continuously improving my skills to create impactful digital solutions.\nLet’s connect !",
  social: [
   { name: 'View Resume', url: '/assets/AdityaTodmalv3.pdf' },
   
@@ -70,7 +70,7 @@ export const skills = [
         name: "React",
         icon: "react.png",
         level: 55,
-        color: "#61dafb",
+        color: "#0081cb",
         // info: "2 years experience, used in 5+ projects"
       },
       {
