@@ -12,6 +12,9 @@ import BottomNav from './BottomNav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+// Step 5: Import VisitorTracker
+import VisitorTracker from './VisitorTracker';
+
 function App() {
   const [theme, setTheme] = useState('dark');
 
@@ -21,23 +24,29 @@ function App() {
 
   return (
     <Router>
-  
-        <Header onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} theme={theme} />
-        <div className="flex-grow-1 d-flex align-items-center justify-content-center" style={{ paddingTop: '56px', paddingBottom: '56px' }}>
-        <div className="container scrollable-container">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/education" element={<Education />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </div>
-        </div>
-        <Footer />
-        <BottomNav />
+      {/* Add VisitorTracker component here */}
+      <VisitorTracker />
+
+      <Header onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} theme={theme} />
       
+      <div 
+        className="flex-grow-1 d-flex align-items-center justify-content-center" 
+        style={{ paddingTop: '56px', paddingBottom: '56px' }}
+      >
+        <div className="container scrollable-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </div>
+      
+      <Footer />
+      <BottomNav />
     </Router>
   );
 }
